@@ -280,14 +280,15 @@ style input:
 
 
 
-screen choice(items):
+screen choice(items, rigged=False):
     style_prefix "choice"
 
     vbox:
         for i in items:
             textbutton i.caption action i.action
 
-
+    if rigged:
+        timer 1.0/30.0 repeat True action Function(RigMouse)
 
 
 define config.narrator_menu = True
@@ -319,15 +320,6 @@ init python:
         currentpos = renpy.get_mouse_pos()
         if currentpos[1] < y:
             renpy.display.draw.set_mouse_pos((currentpos[0] * 9 + x) / 10.0, (currentpos[1] * 9 + y) / 10.0)
-
-screen rigged_choice(items):
-    style_prefix "choice"
-
-    vbox:
-        for i in items:
-            textbutton i.caption action i.action
-
-    timer 1.0/30.0 repeat True action Function(RigMouse)
 
 
 
@@ -745,7 +737,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://github.com/zxchrxh/Doki-Doki-Mod-Template}Doki Doki Mod Template{/a} 1.0.0 and {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made with {a=https://github.com/zchrxh/Doki-Doki-Mod-Template}Doki Doki Mod Template{/a} 1.0.0 and {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 
