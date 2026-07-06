@@ -143,6 +143,4 @@ init python:
     
     build.documentation('README.html')
 
-    build.executable_name = "DDLC"
-
-    build.include_old_themes = False
+    build.destination = "{directory_name}-Mod"
