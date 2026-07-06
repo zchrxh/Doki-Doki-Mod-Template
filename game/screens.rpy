@@ -315,11 +315,10 @@ style choice_button_text is default:
 
 
 init python:
-    def RigMouse():
+    def RigMouse(x=640, y=345):
         currentpos = renpy.get_mouse_pos()
-        targetpos = [640, 345]
-        if currentpos[1] < targetpos[1]:
-            renpy.display.draw.set_mouse_pos((currentpos[0] * 9 + targetpos[0]) / 10.0, (currentpos[1] * 9 + targetpos[1]) / 10.0)
+        if currentpos[1] < y:
+            renpy.display.draw.set_mouse_pos((currentpos[0] * 9 + x) / 10.0, (currentpos[1] * 9 + y) / 10.0)
 
 screen rigged_choice(items):
     style_prefix "choice"
