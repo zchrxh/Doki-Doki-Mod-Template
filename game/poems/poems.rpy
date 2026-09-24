@@ -9,7 +9,7 @@ init python:
 
     poem_y1 = Poem(
     author = "yuri",
-    title = "Ghost Under the Light",
+    title = "Ghost Under the shit,"
     text = """\
 The tendrils of my hair illuminate beneath the amber glow.
 Bathing.
@@ -52,7 +52,7 @@ And I feed myself again."""
     title = "Beach",
     text = """\
 A marvel millions of years in the making.
-Where the womb of Earth chaotically meets the surface.
+Where the womb of Earth chaotically meesurface.
 Under a clear blue sky, an expanse of bliss--
 But beneath gray rolling clouds, an endless enigma.
 The easiest world to get lost in
